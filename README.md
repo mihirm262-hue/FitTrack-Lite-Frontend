@@ -1,56 +1,122 @@
 # FitTrack Lite — Frontend
 
-## Project Overview
-FitTrack Lite is a full-stack fitness and workout progress tracking platform designed to help users manage their fitness activities and monitor workout progress. This repository contains the frontend application.
+## 1. Project Overview
 
-## Technologies Used
-- React.js
-- Vite
-- JavaScript
-- HTML5
-- CSS3
+FitTrack Lite is a full-stack fitness and workout progress tracking platform. The frontend provides the user interface for authentication, workout management, fitness progress tracking, and dashboard visualization.
 
-## Features
-- User-friendly fitness dashboard
-- Workout and exercise tracking interface
-- Fitness progress monitoring
-- Responsive user interface
-- Integration with the backend REST APIs
+This repository contains the frontend application built using React and Vite.
 
-## Prerequisites
-- Node.js
-- npm
-- A web browser
+## 2. Technologies Used
 
-## Installation and Setup
+| Technology | Purpose |
+|---|---|
+| React.js | User interface |
+| Vite | Development server and build tool |
+| JavaScript | Application logic |
+| HTML5 | Page structure |
+| CSS3 | Styling |
+| npm | Package management |
+| Vercel | Frontend deployment |
 
-1. Clone the repository:
+## 3. Features
 
-   `git clone https://github.com/mihirm262-hue/FitTrack-Lite-Frontend.git`
+- User registration and login interface
+- Fitness dashboard
+- Workout plan management
+- Workout history tracking
+- Progress and body measurement tracking
+- Personal records management
+- Integration with backend REST APIs
 
-2. Navigate to the project folder:
+## 4. Prerequisites
 
-   `cd FitTrack-Lite-Frontend`
+Install the following software:
 
-3. Install dependencies:
+| Tool | Version |
+|---|---|
+| Node.js | 18+ |
+| npm | Included with Node.js |
+| Web browser | Chrome, Edge, Firefox, etc. |
 
-   `npm install`
+Check your installation:
 
-4. Start the development server:
+```bash
+node -v
+npm -v
+```
 
-   `npm run dev`
+## 5. Run Locally in VS Code
 
-5. Open the local URL displayed in your terminal, usually `http://localhost:5173`.
+### Step 1: Clone the repository
 
-## Backend Integration
-The frontend communicates with the Spring Boot backend to exchange application data. Configure the backend API URL according to your environment.
+```bash
+git clone https://github.com/mihirm262-hue/FitTrack-Lite-Frontend.git
+cd FitTrack-Lite-Frontend
+```
 
-## Deployment
-The frontend is configured for deployment using Vercel. Deployment requires the appropriate build settings and backend API configuration.
+### Step 2: Install dependencies
 
-## Related Repository
+```bash
+npm install
+```
+
+### Step 3: Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in the terminal, usually:
+
+`http://localhost:5173`
+
+## 6. Backend Integration
+
+The frontend communicates with the FitTrack Lite backend through REST API endpoints.
+
+**Backend repository:**
+
+https://github.com/mihirm262-hue/FitTrack-Lite-Backend
+
+During local development, the backend is expected to run at:
+
+`http://localhost:8080`
+
+The Vite proxy configuration should forward `/api` requests to the backend. Check `vite.config.js` to confirm the configuration.
+
+## 7. Build for Production
+
+Run:
+
+```bash
+npm run build
+```
+
+Vite generates the production build in the `dist` directory.
+
+To test the production build locally:
+
+```bash
+npm run preview
+```
+
+## 8. Deployment Using Vercel
+
+1. Sign in to Vercel.
+2. Import the `FitTrack-Lite-Frontend` GitHub repository.
+3. Select Vite as the framework if it is not detected automatically.
+4. Set the build command to `npm run build`.
+5. Set the output directory to `dist`.
+6. Configure the backend URL in `vercel.json` or the appropriate environment configuration.
+7. Deploy the application.
+
+Ensure the backend URL is correct and the backend permits requests from the deployed frontend.
+
+## 9. Related Repository
+
 **Backend:** https://github.com/mihirm262-hue/FitTrack-Lite-Backend
 
-## Author
+## 10. Author
+
 Mihir  
 Department: Electronics and Communication Engineering (ECE)
